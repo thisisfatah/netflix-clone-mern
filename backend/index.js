@@ -17,7 +17,7 @@ app.use(express.json()); // for parsing application/json
 app.use(cookieParser());
 
 app.use("/api/v1/auth", authRoute);
-app.use("/api/v1/movie", protectRoute, movieRoute);
+app.use("/api/v1/movie", movieRoute);
 app.use("/api/v1/tv", protectRoute, tvRoute);
 app.use("/api/v1/search", protectRoute, searchRoutes);
 
