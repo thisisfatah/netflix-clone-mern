@@ -16,6 +16,8 @@ const app = express();
 app.use(express.json()); // for parsing application/json
 app.use(cookieParser());
 
+connectDB();
+
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/movie", protectRoute, movieRoute);
 app.use("/api/v1/tv", protectRoute, tvRoute);
@@ -23,5 +25,4 @@ app.use("/api/v1/search", protectRoute, searchRoutes);
 
 app.listen(PORT, () => {
   console.log("Server started on port " + PORT);
-  connectDB();
 });
