@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://netflix-clone-backend-wine.vercel.app/",
+        target: "https://netflix-clone-backend-wine.vercel.app",
       },
     },
   },
