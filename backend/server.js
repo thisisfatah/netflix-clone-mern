@@ -24,5 +24,5 @@ app.use("/api/v1/search", protectRoute, searchRoutes);
 
 app.listen(PORT, () => {
   console.log("Server started on port " + PORT);
-  connectDB();
+  // connectDB();
 });
