@@ -22,7 +22,7 @@ const app = express();
 // app.use("/api/v1/tv", protectRoute, tvRoute);
 // app.use("/api/v1/search", protectRoute, searchRoutes);
 
-app.listen(PORT, () => {
+app.listen(5000, () => {
   console.log("Server started on port " + PORT);
   // connectDB();
 });
