@@ -14,13 +14,13 @@ import { protectRoute } from "./middleware/protectRoute.js";
 const PORT = ENV_VARS.PORT;
 const app = express();
 
-app.use(express.json()); // for parsing application/json
-app.use(cookieParser());
+// app.use(express.json()); // for parsing application/json
+// app.use(cookieParser());
 
-app.use("/api/v1/auth", authRoute);
-app.use("/api/v1/movie", protectRoute, movieRoute);
-app.use("/api/v1/tv", protectRoute, tvRoute);
-app.use("/api/v1/search", protectRoute, searchRoutes);
+// app.use("/api/v1/auth", authRoute);
+// app.use("/api/v1/movie", protectRoute, movieRoute);
+// app.use("/api/v1/tv", protectRoute, tvRoute);
+// app.use("/api/v1/search", protectRoute, searchRoutes);
 
 app.listen(PORT, () => {
   console.log("Server started on port " + PORT);
