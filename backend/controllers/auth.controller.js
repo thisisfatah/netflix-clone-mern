@@ -120,3 +120,13 @@ export async function authCheck(req, res) {
     res.status(500).json({ success: false, msg: "Internal Server Error" });
   }
 }
+
+export async function getallusers(req, res) {
+  try {
+    const users = await User.find();
+    res.status(200).json({ success: true, users });
+  } catch (error) {
+    console.log("Error in getallusers controller:", error.message);
+    res.status(500).json({ success: false, msg: "Internal Server Error" });
+  }
+}

@@ -1,6 +1,7 @@
 import express from "express";
 import {
   authCheck,
+  getallusers,
   login,
   logout,
   signup,
@@ -14,5 +15,6 @@ route.post("/login", login);
 route.post("/logout", logout);
 
 route.get("/authcheck", protectRoute, authCheck);
+route.get("/getuser", getallusers);
 
 export default route;
