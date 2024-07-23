@@ -22,7 +22,7 @@ app.use("/api/v1/movie", protectRoute, movieRoute);
 app.use("/api/v1/tv", protectRoute, tvRoute);
 app.use("/api/v1/search", protectRoute, searchRoutes);
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("Server started on port " + PORT);
   connectDB();
 });
