@@ -1,6 +1,5 @@
 import express from "express";
 import cookieParser from "cookie-parser";
-// import path from "path";
 
 import authRoute from "./routes/auth.route.js";
 import movieRoute from "./routes/movie.route.js";
