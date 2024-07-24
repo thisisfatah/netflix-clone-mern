@@ -33,7 +33,9 @@ const SearchHistoryPage = () => {
   useEffect(() => {
     const getSearchHistory = async () => {
       try {
-        const response = await axios.get(`/api/v1/search/history`);
+        const response = await axios.get(
+          `https://netflix-clone-api-six.vercel.app/api/v1/search/history`
+        );
         setSearchHistory(response.data.content);
       } catch (error) {
         setSearchHistory([]);
@@ -45,7 +47,9 @@ const SearchHistoryPage = () => {
 
   const handleDelete = async (item) => {
     try {
-      await axios.delete(`/api/v1/search/history/${item.id}`);
+      await axios.delete(
+        `https://netflix-clone-api-six.vercel.app/api/v1/search/history/${item.id}`
+      );
       setSearchHistory(searchHistory.filter((item) => item.id !== item.id));
     } catch (error) {
       toast.error(error.response.data.msg || "An error occurred");
