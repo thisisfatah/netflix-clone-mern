@@ -14,13 +14,14 @@ import { protectRoute } from "./middleware/protectRoute.js";
 const PORT = ENV_VARS.PORT;
 const app = express();
 
-app.use(express.json()); // for parsing application/json
-app.use(cookieParser());
 app.use(
   cors({
     origin: "https://netflix-clone.fatahdev.com",
   })
 );
+
+app.use(express.json()); // for parsing application/json
+app.use(cookieParser());
 
 connectDB();
 
