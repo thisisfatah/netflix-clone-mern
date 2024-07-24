@@ -22,7 +22,7 @@ export const useAuthStore = create((set) => ({
   login: async (credentials) => {
     set({ isLoggingIn: true });
     try {
-      const response = await axios.post(
+      const response = await axios.get(
         "https://netflix-clone-api-six.vercel.app/api/v1/auth/getuser",
         credentials
       );
