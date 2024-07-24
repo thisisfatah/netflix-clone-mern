@@ -26,7 +26,7 @@ const SearchPage = () => {
     e.preventDefault();
     try {
       const response = await axios.get(
-        `https://netflix-clone-api-six.vercel.app/api/v1/search/${activeTab}/${searchTerm}`
+        `api/v1/search/${activeTab}/${searchTerm}`
       );
       setResults(response.data.results);
     } catch (error) {

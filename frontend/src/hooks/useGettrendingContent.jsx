@@ -8,9 +8,7 @@ const useGettrendingContent = () => {
 
   useEffect(() => {
     const getTrendingContent = async () => {
-      const res = await axios.get(
-        `https://netflix-clone-api-six.vercel.app/api/v1/${contentType}/trending`
-      );
+      const res = await axios.get(`/api/v1/${contentType}/trending`);
       setTrendingContent(res.data.content);
     };
 
