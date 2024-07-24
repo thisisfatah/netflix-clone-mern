@@ -1,5 +1,6 @@
 import express from "express";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 
 import authRoute from "./routes/auth.route.js";
 import movieRoute from "./routes/movie.route.js";
@@ -15,13 +16,13 @@ const app = express();
 
 app.use(express.json()); // for parsing application/json
 app.use(cookieParser());
+app.use(
+  cors({
+    origin: "https://netflix-clone.fatahdev.com",
+  })
+);
 
 connectDB();
-
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  next();
-});
 
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/movie", protectRoute, movieRoute);
