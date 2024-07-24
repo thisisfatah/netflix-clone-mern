@@ -17,6 +17,7 @@ const app = express();
 app.use(
   cors({
     origin: "https://netflix-clone.fatahdev.com",
+    methods: ["GET", "POST", "PATCH", "DELETE"],
   })
 );
 
